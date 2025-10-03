@@ -1,0 +1,19 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+  <input v-model = "message">
+  <h1>Hello, {{ message }}</h1>
+</div>
+
+<script>
+  const { createApp, ref } = Vue
+
+  createApp({
+    setup() {
+      const message = ref('view')
+      return {
+        message
+      }
+    }
+  }).mount('#app')
+</script>
